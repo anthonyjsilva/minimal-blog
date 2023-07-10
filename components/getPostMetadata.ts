@@ -12,9 +12,10 @@ const getPostMetadata = (): PostMetadata[] => {
     const fileContents = fs.readFileSync(`posts/${fileName}`, "utf8");
     const matterResult = matter(fileContents);
     return {
-      title: matterResult.data.title,
       date: matterResult.data.date,
+      title: matterResult.data.title,
       subtitle: matterResult.data.subtitle,
+      thumbnail: matterResult.data.thumbnail,
       slug: fileName.replace(".md", ""),
     };
   });

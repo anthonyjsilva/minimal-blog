@@ -1,6 +1,8 @@
 export interface PostMetadata {
-  title: string;
   date: string;
-  subtitle: string;
+  title: string;
+  subtitle?: string;
+  thumbnail: string;
+  thumbnailText?: string;
   slug: string;
 }
